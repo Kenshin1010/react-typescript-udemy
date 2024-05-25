@@ -36,7 +36,7 @@ console.log(person);
 //   isEmployee: true,
 // };
 
-let people: Person[];
+const people: Person[] = [];
 console.log(people);
 
 // Type interface
@@ -54,7 +54,7 @@ console.log(add(2, 5));
 //   console.log("Result: " + num);
 // }
 
-function printResult(value: any) {
+function printResult(value: number | string): void {
   console.log("Result: " + value);
 }
 console.log(printResult(123));
@@ -69,5 +69,7 @@ const demoArray = [1, 2, 3];
 const updatedArray = insertAtBeginning(demoArray, -1); //[-1, 1, 2, 3]
 const stringArray = insertAtBeginning(["a", "b", "c"], "d");
 console.log(stringArray);
+console.log(updatedArray);
 
-updatedArray[0].split("");
+// Removed updatedArray[0].split(""); as updatedArray contains numbers, not strings.
+// updatedArray[0].split("");
